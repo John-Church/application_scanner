@@ -4,7 +4,11 @@ from PyPDF2 import PdfFileReader
 import base64
 import io
 from openai import OpenAI
-client = OpenAI(api_key='')
+from dotenv import load_dotenv
+
+load_dotenv()
+
+client = OpenAI()
 
 
 # Function to split PDF into pages and convert to base64 images
